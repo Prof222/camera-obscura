@@ -54,6 +54,9 @@ elif sys.platform == 'win32':
     from glob import glob
 
     import py2exe
+    import paths
+    import math
+    import geo
 
     # pack MSVC libs for python 2.7
 #    data_files.append(os.path.abspath('./__debug_env_w32/Python27/msvcr90.dll'))
