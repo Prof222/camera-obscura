@@ -20,6 +20,7 @@ def main():
     width, height = 128, 128
     ripples = Ripples(width, height)
     height_texture = Texture(width*2, height*2, format=GL_RGBA32F)
+    depth = Ripples(depth, .5)
     processor = Processor(height_texture)
     gaussian = Gaussian(processor)
     heightmap = Heightmap(width*2, height*2, scale=1.2)
