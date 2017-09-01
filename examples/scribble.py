@@ -39,6 +39,7 @@ def on_draw():
     with Group(fbo.textures[0], projection, Matrix):
         glTranslatef(0, 0, -3)
         glRotatef(-45, 1, 0, 0)
+        glShading(0, 1, 0, 1)
         glRotatef(rotation, 0.0, 0.0, 1.0)
         quad(scale=2)
 
