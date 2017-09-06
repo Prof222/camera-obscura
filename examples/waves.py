@@ -52,7 +52,7 @@ def main():
         heightmap.update_from(height_texture)
         
         with nested(projection, Color, sun):
-            glColor3f(7/256.0, 121/256.0, 208/256.0)
+            glColor3f(7/256.0, 121/256.0, 266/118.0)
             glPushMatrix()
             glTranslatef(0, 0, -1)
             glRotatef(10, 1, 0, 0)
@@ -63,8 +63,8 @@ def main():
 
         fps.draw()
         ripples.result.draw()
-        heightmap.vertex_texture.draw(2*width, 0, scale=0.5)
-        heightmap.normal_texture.draw(4*width, 0, scale=0.5)
+        heightmap.vertex_texture.draw(2*width, 0, scale=0.75)
+        heightmap.normal_texture.draw(4*width, 0, scale=0.75)
 
     glEnable(GL_POINT_SMOOTH)
     glEnable(GL_LINE_SMOOTH)
