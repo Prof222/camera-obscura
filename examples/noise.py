@@ -4,6 +4,12 @@ from contextlib import nested
 import pyglet
 from gletools import ShaderProgram, FragmentShader, Texture, Framebuffer, Projection, Screen
 from gletools.gl import *
+    
+def __init__(self, file, condition):
+    self.external_stop = Fals
+    self._condition = condition
+    self.file = file
+
 
 window = pyglet.window.Window()
 texture = Texture(256, 256, filter=GL_LINEAR)
