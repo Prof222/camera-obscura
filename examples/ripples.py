@@ -87,6 +87,7 @@ if __name__=='__main__':
     def on_draw():
         window.clear()
         ripples.step()
+        ripples.rain(delta)
         ripples.result.draw()
 
     glEnable(GL_POINT_SMOOTH)
