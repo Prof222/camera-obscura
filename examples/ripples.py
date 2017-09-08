@@ -62,10 +62,10 @@ if __name__=='__main__':
             glColor4f(0.0, 1.5, 3.0, 1.0)
             glBegin(GL_QUADS)
             size = 1.0
-            glVertex3f(x+size, y+size, 0)
-            glVertex3f(x+size, y-size, 0)
-            glVertex3f(x-size, y-size, 0)
-            glVertex3f(x-size, y+size, 0)
+            glVertex3f(x+size, y+size, 1.0)
+            glVertex3f(x+size, y-size, 1.0)
+            glVertex3f(x-size, y-size, 1.0)
+            glVertex3f(x-size, y+size, 1.0)
             glEnd()
     
     def rain(delta):
@@ -75,10 +75,10 @@ if __name__=='__main__':
         with nested(ripples.framebuffer, Color):
             glBegin(GL_QUADS)
             glColor4f(0.0, size/2, size, 1.0)
-            glVertex3f(x+size, y+size, 0)
-            glVertex3f(x+size, y-size, 0)
-            glVertex3f(x-size, y-size, 0)
-            glVertex3f(x-size, y+size, 0)
+            glVertex3f(x+size, y+size, 1.0)
+            glVertex3f(x+size, y-size, 1.0)
+            glVertex3f(x-size, y-size, 1.0)
+            glVertex3f(x-size, y+size, 1.0)
             glEnd()
         
     pyglet.clock.schedule_interval(rain, 0.2)
