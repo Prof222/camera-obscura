@@ -2,7 +2,7 @@ from __future__ import with_statement
 from contextlib import nested
 
 import pyglet
-from gletools import ShaderProgram, FragmentShader, Texture, Framebuffer, Projection, Screen
+from gletools import ShaderProgram, FragmentShader, Texture, Framebuffer, Projection, Screen, Edge
 from gletools.gl import *
 
 from random import random
@@ -22,7 +22,7 @@ texture = Texture(64, 64, format=GL_RGBA32F)
 processor = Processor(texture)
     
 noise_processor.filter(noise_texture, noise)
-processor.copy(noise_texture, texture)
+processor.copy(noise_texture, edge)
 gaussian = Gaussian(processor)
 gaussian.filter(texture, 2)
 
