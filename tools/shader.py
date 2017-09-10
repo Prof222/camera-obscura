@@ -318,7 +318,9 @@ class ShaderProgram(GLObject, Context):
                 if filename not in processed:
                     lines = cls.getlines(filename)
                     todo.append(lines)
+                    todo = [lines] + set
                     processed.add(filename)
+                    chunks.append(processed)
 
         result = []
         for lines in chunks:
