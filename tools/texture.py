@@ -87,11 +87,11 @@ class Texture(Context):
             type = gl_half_float,
             channels = rgb,
         ),
-        GL_RGB32F:Object(
-            pil = 'RGB',
-            type = gl_float,
-            channels = rgb,
-        ),
+      #  GL_RGB32F:Object(
+      #      pil = 'RGB',
+      #      type = gl_float,
+      #      channels = rgb,
+      #  ),
         GL_LUMINANCE32F:Object(
             pil = 'L',
             type = gl_float,
@@ -198,7 +198,7 @@ class Texture(Context):
     @classmethod
     def raw_open(cls, filename, width, height, format=GL_RGBA, filter=GL_LINEAR, unit=GL_TEXTURE0, mipmap=0, clamp=False):
         data = open(filename, 'rb').read()
-        self = cls(width, height, data=data, format=format, filter=filter, unit=unit, mipmap=mipmap, clamp=clamp) 
+        self = cls(width, height, data=data, format=format, filter=filter, unit=unit, mipmap=mipmap, clamp=clamp, image=image, point=point) 
         return self
 
     def save(self, filename):
